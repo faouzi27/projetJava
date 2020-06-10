@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.AfficherCategorieController">
+   <children>
+      <TableView fx:id="table" layoutX="103.0" layoutY="100.0" prefHeight="200.0" prefWidth="327.0">
+        <columns>
+          <TableColumn fx:id="Id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nom" prefWidth="137.0" text="Nom" />
+        </columns>
+      </TableView>
+      <Button layoutX="486.0" layoutY="188.0" mnemonicParsing="false" onAction="#Supprimer" text="Supprimer" />
+   </children>
+</AnchorPane>

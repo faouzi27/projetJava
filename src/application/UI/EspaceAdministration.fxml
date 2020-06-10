@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="bp" onMouseEntered="#idfromtitle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="1278.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.EspaceAdministrationController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="464.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="176.0" prefWidth="100.0" />
+            <Button fx:id="parentbu" mnemonicParsing="false" onMouseClicked="#parentbu" prefHeight="25.0" prefWidth="136.0" text="parent/apprennant" />
+            <Pane layoutX="10.0" layoutY="319.0" prefHeight="238.0" prefWidth="100.0" />
+            <Button fx:id="emploiyerbu" mnemonicParsing="false" onMouseClicked="#emploiyerbu" text="emploiyer/enseignant" />
+            <Pane prefHeight="171.0" prefWidth="100.0" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="welcAdmin" prefHeight="29.0" prefWidth="281.0" text="Label" />
+            <Button fx:id="Deconnection" mnemonicParsing="false" onAction="#Deconnection" text="Deconnection" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox fx:id="vb" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="user A/P" />
+                  <ComboBox fx:id="app_parentCom" onAction="#app_parentCom" prefWidth="150.0" />
+                  <Label text="Class Apprennant" />
+                  <ComboBox fx:id="classeCom" onAction="#classeCom" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="login" />
+                  <TextField fx:id="loginap" />
+                  <Label text="password" />
+                  <TextField fx:id="passap" />
+                  <Label text="Mail" />
+                  <TextField fx:id="emailap" />
+                  <Label text="Tel" />
+                  <TextField fx:id="telap" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="224.0" prefWidth="879.0">
+               <children>
+                  <TableView fx:id="tablev1" onMouseClicked="#tableevent" prefHeight="220.0" prefWidth="1130.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="813.0">
+               <children>
+                  <Button fx:id="modifierad" mnemonicParsing="false" onAction="#modifierad" text="modifier" />
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="supprimerad" mnemonicParsing="false" onAction="#supprimerad" text="supprimer" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

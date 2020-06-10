@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#filcom" prefHeight="651.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.EspaceAdministrationController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="53.0" prefWidth="657.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="128.0" text="employe/enseignant" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="232.0" layoutY="10.0" prefHeight="31.0" prefWidth="43.0" />
+      <ComboBox fx:id="ens_emp" layoutX="283.0" layoutY="31.0" onAction="#ens_emp" prefWidth="150.0" />
+            <VBox alignment="CENTER" prefHeight="31.0" prefWidth="35.0" />
+            <Label text="Matiere" />
+      <ComboBox fx:id="MatiereCom" layoutX="514.0" layoutY="31.0" onAction="#MatiereCom" onMouseClicked="#MatiereCom" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="69.0" prefWidth="657.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="69.0">
+               <children>
+                  <Label text="Username" />
+                  <Label text="prenom" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="260.0" layoutY="10.0" prefHeight="100.0" prefWidth="226.0">
+               <children>
+                  <TextField fx:id="usernametx" layoutX="10.0" layoutY="20.0" />
+                  <TextField fx:id="prenomtx" layoutX="10.0" layoutY="20.0" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="344.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                     <children>
+                        <Label text="password" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="232.0" layoutY="10.0" prefHeight="100.0" prefWidth="218.0">
+                     <children>
+                        <TextField fx:id="passwordx" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="72.0" prefWidth="657.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="84.0">
+               <children>
+                  <Label text="email" />
+                  <Label text="cin" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="232.0" layoutY="10.0" prefHeight="50.0" prefWidth="247.0">
+               <children>
+                  <TextField fx:id="emailtx" />
+                  <TextField fx:id="cinx" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="357.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="72.0" prefWidth="57.0">
+                     <children>
+                        <Label text="tel" />
+                        <Label text="sexe" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="288.0" layoutY="10.0" prefHeight="72.0" prefWidth="225.0">
+                     <children>
+                        <TextField fx:id="telx" prefHeight="25.0" prefWidth="227.0" />
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="173.0">
+                           <children>
+                              <RadioButton fx:id="sexehx" mnemonicParsing="false" onAction="#h_h" text="h" />
+                              <Pane prefHeight="37.0" prefWidth="73.0" />
+                              <RadioButton fx:id="sexefx" mnemonicParsing="false" onAction="#f_f" text="f" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="310.0" prefHeight="69.0" prefWidth="657.0">
+         <children>
+            <Label text="date" />
+            <DatePicker fx:id="dt" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+            <VBox alignment="CENTER" layoutX="288.0" layoutY="10.0" prefHeight="34.0" prefWidth="247.0">
+               <children>
+                  <Label text="Matiere" />
+                  <TextField fx:id="matierx" prefHeight="25.0" prefWidth="171.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="330.0" prefHeight="60.0" prefWidth="657.0">
+         <children>
+            <Button fx:id="ajouterui" mnemonicParsing="false" onAction="#ajouterui" text="ajouter" />
+            <Pane prefHeight="71.0" prefWidth="108.0" />
+            <Button fx:id="modifierui" layoutX="284.0" layoutY="33.0" mnemonicParsing="false" onAction="#modifierui" text="modifier" />
+            <Pane prefHeight="71.0" prefWidth="98.0" />
+            <Button fx:id="supprimerbui" layoutX="310.0" layoutY="33.0" mnemonicParsing="false" onAction="#supprimerbui" text="supprimer" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="287.0" prefHeight="272.0" prefWidth="614.0">
+         <children>
+            <TableView fx:id="tablex1" onMouseClicked="#tablex" prefHeight="129.0" prefWidth="568.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

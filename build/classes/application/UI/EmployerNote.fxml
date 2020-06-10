@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.InterfaceNoteController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="701.0" style="-fx-background-image: url('file:C:/Users/Hamza/Desktop/hm.jpg');">
+         <children>
+            <Button fx:id="affecterNote" layoutX="502.0" layoutY="74.0" mnemonicParsing="false" onAction="#Affecter_Note" style="-fx-background-color: #f15656;" text="AffecterNote" />
+            <Label layoutX="183.0" layoutY="49.0" text=" Apprenant" />
+            <Label layoutX="364.0" layoutY="49.0" text="Matiere" />
+            <Label layoutX="481.0" layoutY="113.0" text="Moyenne" />
+            <Label layoutX="335.0" layoutY="113.0" text="Note Orale" />
+            <Label layoutX="178.0" layoutY="113.0" text="Note Ecrit" />
+            <TextField fx:id="textecrit" layoutX="130.0" layoutY="140.0" />
+            <TextField fx:id="textorale" layoutX="290.0" layoutY="140.0" />
+            <TextField fx:id="textmoyenne" editable="false" layoutX="444.0" layoutY="140.0" onMouseClicked="#moyenne" promptText="NoteO+NoteE*2/3" />
+            <ComboBox fx:id="BoxMatiere" editable="true" layoutX="330.0" layoutY="74.0" prefWidth="150.0" promptText="Choisir la Matiere" style="-fx-background: transparant;" />
+            <ComboBox fx:id="BoxApp" layoutX="168.0" layoutY="74.0" onAction="#userChanged" prefWidth="150.0" promptText="Choisir l'apprenant" style="-fx-background: transparant;" />
+            <Label layoutX="259.0" layoutY="16.0" text="AJOUTER NOTE" />
+            <Button fx:id="rm" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#retourmenu" style="-fx-background-color: #f15656;" text="Retour Au Menu" />
+            <TableView fx:id="TableDesNotes" layoutX="84.0" layoutY="176.0" prefHeight="221.0" prefWidth="451.0" style="-fx-background-color: transparant;">
+              <columns>
+                  <TableColumn fx:id="CMatiere" prefWidth="75.0" style="-fx-background-color: #43b9d6;" text="Matiere" />
+                  <TableColumn fx:id="CNoteOrale" prefWidth="75.0" style="-fx-background-color: #43b9d6;" text="Note Orale" />
+                  <TableColumn fx:id="CNoteEcrit" prefWidth="75.0" style="-fx-background-color: #43b9d6;" text="Note Ecrit" />
+                  <TableColumn fx:id="CMoyenne" prefWidth="150.0" style="-fx-background-color: #43b9d6;" text="Moyenne" />
+                  <TableColumn fx:id="cID" prefWidth="75.0" style="-fx-background-color: #43b9d6;" text="ID" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnupdate" layoutX="535.0" layoutY="35.0" mnemonicParsing="false" onAction="#Update" style="-fx-background-color: #f15656;" text="Update" />
+            <Button fx:id="btnSupp" layoutX="453.0" layoutY="35.0" mnemonicParsing="false" onAction="#Supprission" style="-fx-background-color: #f15656;" text="Supprission" />
+            <ComboBox fx:id="boxClasse" layoutX="3.0" layoutY="74.0" onAction="#getApprenantByClasse" prefWidth="150.0" promptText="Classe" style="-fx-background: transparant;" />
+            <Button fx:id="selection" layoutX="3.0" layoutY="140.0" mnemonicParsing="false" onAction="#SelectionNote" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #f15656;" text="Selection" />
+            <TextField fx:id="textID" layoutX="88.0" layoutY="140.0" prefHeight="25.0" prefWidth="29.0" />
+            <Label layoutX="97.0" layoutY="113.0" text="ID" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

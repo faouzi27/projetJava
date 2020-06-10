@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.AjouterMatiereMonLivreController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="401.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="181.0" layoutY="47.0" text="AjouterMatiére Mon LIvre">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom" layoutX="182.0" layoutY="148.0" />
+            <TextField fx:id="nbh" layoutX="182.0" layoutY="201.0" />
+            <ChoiceBox fx:id="cat" layoutX="181.0" layoutY="256.0" prefWidth="150.0" />
+            <Button layoutX="448.0" layoutY="226.0" mnemonicParsing="false" onAction="#uploadFile" text="Upload Image" />
+            <ImageView fx:id="imv" fitHeight="102.0" fitWidth="157.0" layoutX="407.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="72.0" layoutY="153.0" text="Nom Matiére" />
+            <Label layoutX="65.0" layoutY="205.0" text="Nombre Heures" />
+            <Label layoutX="65.0" layoutY="260.0" text="Categories" />
+            <Button layoutX="204.0" layoutY="325.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="25.0" prefWidth="106.0" text="Ajouter" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
